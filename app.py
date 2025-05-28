@@ -4,6 +4,8 @@ import boto3
 from transformers import pipeline
 import torch
 
+aws_key = os.environ.get("AWS_ACCESS_KEY_ID")
+aws_secret = os.environ.get("AWS_SECRET_ACCESS_KEY")
 
 bucket_name = 'mlops-bucket-2025'
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
