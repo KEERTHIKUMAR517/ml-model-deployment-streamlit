@@ -15,11 +15,7 @@ local_path = 'tiny-bert-streamlit'
 s3_prefix = 'ml-models/tinybert-sentiment-analysis'
 
 # Use secrets
-s3 = boto3.client(
-    "s3",
-    aws_access_key_id=aws_access_key,
-    aws_secret_access_key=aws_secret_key
-)
+s3 = boto3.client("s3")
 
 def download_dir(local_path, s3_prefix):
     os.makedirs(local_path, exist_ok=True)
